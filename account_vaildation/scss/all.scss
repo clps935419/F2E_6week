@@ -1,0 +1,180 @@
+@import 'reset';
+body,
+html {
+  background: #eee;
+  font-size: 14px;
+  color: #333;
+  font-family: "Open Sans", "Helvetica Neue", "sans-serif";
+  height: 100%;
+ 
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrap{
+    width: 1024px;
+    height: 100%;
+    background: #FFFFFF;
+    .borderbox{
+        width: 456px;
+        height: 8px;
+        background: #0275D8;
+        margin: 0 auto;
+    }
+    h1 {
+        font-family: Roboto-Light;
+        font-size: 48px;
+        color: #000000;
+        text-align: center;
+    }
+    h2{
+        font-family: Roboto-Light;
+        font-size: 24px;
+        color: #000000;
+        text-align: center;
+        padding-bottom: 24px;
+    }
+    form{
+        width: 460px;
+        margin: 0 auto;
+        label{
+            font-family: Roboto-Regular;
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: 0;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bolder;
+        }
+        .textbox{
+            border: 2px solid #000000;
+            border-radius: 8px;
+            width: 460px;
+            height: 42px;
+            font-size: 24px;
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+        .but{
+            width: 460px;
+            height: 42px;
+            background: #BEE1FF ;
+            color: white;
+            border:none;
+            border-radius: 10px;
+        }
+        .but:hover{
+            background: #0275D8;
+            
+        }
+    }
+}
+
+
+// .next-step {
+//   background: #ccc;
+//   color: #555;
+//   padding: 15px;
+//   font-size: 16px;
+//   font-weight: 300;
+//   display: block;
+//   margin: 80px auto 0;
+//   border-radius: 4px;
+//   width: 150px;
+//   cursor: pointer;
+// }
+// .next-step:hover {
+//   background: #bbb;
+// }
+
+.step-container {
+  margin: 3% auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  .step{
+      position: relative;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      font-weight: bolder;
+      border-radius: 50%;
+      text-align: center;
+      background: white ;
+      border: #BEE1FF 1px solid;
+    //   background-position: right bottom;
+      line-height: 50px;
+  }
+  .step-separator{
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    height: 2px;
+    background:#BEE1FF;
+    margin-top: 8px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+ 
+   .step.active{
+    border: #BEE1FF 1px solid;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 2;
+  }
+  .active::before{
+      content: "";
+      width: 8px;
+      height: 8px;
+      background:#0275D8;
+      position: absolute;
+      z-index: 3;
+      border-radius: 50%;
+      top: 20%;
+      left: 25%;
+  }
+}
+// .step-container .step {
+//   position: relative;
+//   z-index: 2;
+//   display: inline-block;
+//   text-align: center;
+//   background: #000;
+//   width: 80px;
+//   height: 80px;
+//   font-weight: bold;
+//   border-radius: 50%;
+//   padding-top: 30px;
+//   transition: background 1000ms ease, color 1000ms ease;
+//   transition-delay: 800ms;
+//   background: linear-gradient(to right, #79A529 50%, #fff 50%);
+//   background-size: 200% 100%;
+//   background-position: right bottom;
+// }
+// .step-container .step.active {
+//   background-position: left bottom;
+//   color: #fff;
+// }
+// .step-container .step-separator {
+//   position: relative;
+//   z-index: 1;
+//   background: #444;
+//   height: 30px;
+//   width: 100px;
+//   margin: 0 -10px -10px -10px;
+//   display: inline-block;
+//   background: linear-gradient(to right, #79A529 50%, rgba(255, 255, 255, 0.5) 50%);
+//   background-size: 200% 100%;
+//   background-position: right bottom;
+//   transition: background 1000ms ease;
+// }
+.step-container .step-separator.active {
+  background-position: left bottom;
+}
